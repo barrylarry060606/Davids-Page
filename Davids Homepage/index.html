@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Persönliche Finanzberatung und -planung in Lingen (Ems). Dein Finanzhaus im Emsland.">
+  <meta name="author" content="Finanzhaus Emsland">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Finanzhaus Emsland – Dein Finanzhaus im Emsland">
+  <meta property="og:description" content="Persönliche Finanzberatung und -planung in Lingen (Ems).">
+  <title>Finanzhaus Emsland – Dein Finanzhaus im Emsland</title>
+  <link rel="icon" href="Logos/logo-transparent.svg" type="image/svg+xml">
+  <style>
+    :root{--red:#f31310;--ink:#0d0d0d;--soft:#f6f6f6;--line:#dedede;--width:1160px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;color:var(--ink);font:16px/1.6 Arial,Helvetica,sans-serif}
+    img,video,iframe{max-width:100%}
+    a{color:inherit}
+    button,a{ -webkit-tap-highlight-color:transparent}
+    button:focus-visible,a:focus-visible{outline:3px solid #efb600;outline-offset:3px}
+    .container{width:min(var(--width),calc(100% - 40px));margin:auto}
+    .section{padding:80px 0}
+    .title{text-align:center;font-size:clamp(2rem,4vw,2.8rem);line-height:1.15;margin:0 0 16px}
+    .title:after{content:"";display:block;width:50px;height:4px;margin:14px auto;background:var(--red);border-radius:4px}
+    .intro{max-width:850px;margin:0 auto 40px;text-align:center;color:#444}
+    .button{display:inline-flex;justify-content:center;align-items:center;min-height:48px;padding:11px 22px;border:0;border-radius:8px;background:var(--red);color:#fff;text-decoration:none;font-weight:700;cursor:pointer;transition:.2s}
+    .button:hover{opacity:.9;transform:translateY(-2px)}
+    .button-dark{background:var(--ink)}
+    .button-small{min-height:40px;padding:8px 16px;border-radius:24px;font-size:.88rem}
+    .header{position:sticky;top:0;z-index:10;background:#fffe;box-shadow:0 2px 12px #0002}
+    .nav{min-height:88px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .logo img{width:190px;max-height:78px;object-fit:contain}
+    .nav-content,.nav-links,.nav-actions{display:flex;align-items:center;gap:20px}
+    .nav-links a{text-decoration:none;font-weight:700;text-transform:uppercase;font-size:.9rem}
+    .nav-links a:hover{color:var(--red)}
+    .nav-actions{gap:9px}
+    .menu-toggle{display:none;padding:8px 12px;background:white;border:1px solid var(--line);border-radius:8px;font-size:1.4rem}
+    .hero{position:relative;min-height:min(760px,calc(100vh - 88px));display:grid;place-items:center;overflow:hidden;background:#333;color:white;text-align:center}
+    .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .hero:before{position:absolute;inset:0;content:"";background:#0009}
+    .hero-content{position:relative;max-width:850px;padding:55px 22px}
+    .hero h1{margin:0;font-size:clamp(2.7rem,7vw,5.5rem);line-height:1.06;text-transform:uppercase}
+    .hero p{margin:20px 0 28px;font-size:clamp(1.2rem,3vw,1.6rem);color:#eee}
+    .app{padding:0;text-align:center}
+    .app a{display:block;width:100%}
+    .app-banner{display:block;width:100%;height:auto}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+    .service{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+    .service summary{min-height:132px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:20px;text-align:center;font-size:1.1rem;font-weight:bold;cursor:pointer;list-style:none}
+    .service summary::-webkit-details-marker{display:none}
+    .service summary:before{content:"+";font-size:2.2rem;line-height:1;color:var(--red)}
+    .service[open] summary:before{content:"−"}
+    .service summary:hover{background:#fff3f3}
+    .service p{margin:0;padding:0 20px 22px;color:#444}
+    .cta{text-align:center;margin-top:40px}
+    .steps{background:#fafafa}
+    .step-list{display:grid;gap:36px;margin-top:42px}
+    .step{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:36px}
+    .step:nth-child(even) .step-image{order:2}
+    .step img{width:100%;max-height:330px;object-fit:cover;border-radius:12px;box-shadow:0 8px 22px #0002}
+    .step-number{color:var(--red);font-weight:bold;text-transform:uppercase;font-size:.9rem}
+    .step h3{font-size:1.5rem;margin:5px 0 10px}
+    .step p{margin:0;color:#444}
+    .feature{padding:28px;border:1px solid var(--line);border-radius:14px;background:#fafafa;text-align:center}
+    .feature h3{margin:0 0 18px;color:var(--red)}
+    .tools{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0}
+    .tool{min-height:112px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:15px;border:1px solid var(--line);border-radius:12px;text-align:center;text-decoration:none;font-weight:bold;transition:.2s}
+    .tool-icon{width:32px;height:32px;flex:none;color:var(--red);fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    .tool:hover{background:#fff1f1;transform:translateY(-2px)}
+    .tool.disabled{color:#777;background:#f5f5f5}
+    .tool small{font-weight:normal}
+    .people{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:38px}
+    .person{padding:30px;border:1px solid var(--line);border-radius:14px;text-align:center;box-shadow:0 7px 22px #0000000d}
+    .person h3{margin:0;font-size:1.8rem}
+    .role{margin:5px 0 16px;color:var(--red);font-size:1.15rem;font-weight:bold}
+    .quote{min-height:56px;font-size:1.1rem;font-weight:600}
+    .contacts{display:flex;justify-content:center;flex-wrap:wrap;gap:18px;margin:20px 0}
+    .contacts a{color:var(--red);font-weight:bold}
+    .reviews{padding:60px 0;background:#fafafa}
+    .review-head{text-align:center}
+    .review-head h2{margin:0 0 8px;font-size:clamp(1.8rem,4vw,2.5rem)}
+    .stars{color:#e6a900}
+    .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+    .review{padding:20px;border:1px solid var(--line);border-radius:12px;background:white}
+    .review h3{margin:0 0 8px;font-size:1rem}
+    .review p{margin:10px 0 0}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:38px}
+    .contact-grid iframe,.location{width:100%;height:330px;border:0;border-radius:12px}
+    .location{position:relative;overflow:hidden}
+    .location img{width:100%;height:100%;object-fit:cover}
+    .location p{position:absolute;inset:auto 0 0;margin:0;padding:28px 18px 16px;color:white;background:linear-gradient(transparent,#000c)}
+    .addresses{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:30px 0;text-align:center}
+    .partners-title{text-align:center;font-weight:bold;margin:28px 0 18px}
+    .partners{overflow:hidden}
+    .partners-track{display:flex;width:max-content;animation:partner-scroll 48s linear infinite}
+    .partners-group{display:flex;flex:none;align-items:center;gap:36px;padding-right:36px}
+    .partners-group img{flex:0 0 140px;width:140px;height:60px;object-fit:contain}
+    .partners:hover .partners-track,.partners:focus-within .partners-track{animation-play-state:paused}
+    @keyframes partner-scroll{to{transform:translateX(-50%)}}
+    footer{padding:34px 18px;text-align:center;background:#d9d9d9}
+    .footer-links,.social{display:flex;justify-content:center;flex-wrap:wrap;gap:22px}
+    .footer-links a,.social a{font-weight:bold;text-decoration:none}
+    .social{margin:22px 0}
+    .floating{position:fixed;z-index:9;right:16px;bottom:18px;display:grid;gap:10px}
+    .floating a{width:48px;height:48px;display:grid;place-items:center;border-radius:50%;background:var(--red);color:white;text-decoration:none;font-size:1.2rem;box-shadow:0 4px 12px #0003}
+    @media(max-width:1050px){
+      .menu-toggle{display:block}
+      .nav-content{display:none;position:absolute;top:100%;left:0;right:0;padding:18px 20px 24px;background:white;box-shadow:0 8px 12px #0002}
+      .nav-content.open{display:grid;gap:16px}
+      .nav-links,.nav-actions{align-items:stretch;flex-direction:column;gap:10px}
+      .nav-links a{padding:5px 0}
+      .nav-actions .button{width:100%}
+    }
+    @media(max-width:760px){
+      .section{padding:60px 0}
+      .services{grid-template-columns:repeat(2,1fr);gap:12px}
+      .service summary{min-height:120px;font-size:1rem;padding:14px}
+      .service p{padding:0 14px 18px;font-size:.94rem}
+      .step,.contact-grid{grid-template-columns:1fr;gap:18px}
+      .step:nth-child(even) .step-image{order:0}
+      .step img{max-height:280px}
+      .tools,.review-grid{grid-template-columns:repeat(2,1fr)}
+      .people{grid-template-columns:1fr}
+      .partners-group{gap:24px;padding-right:24px}
+      .partners-group img{flex-basis:120px;width:120px;height:52px}
+      .addresses{grid-template-columns:1fr}
+    }
+    @media(max-width:460px){
+      .container{width:calc(100% - 28px)}
+      .logo img{width:145px}
+      .services,.tools,.review-grid{grid-template-columns:1fr}
+      .hero{min-height:72vh}
+      .person{padding:24px 18px}
+      .floating{right:10px;bottom:10px;display:flex;gap:7px}
+      .floating a{width:42px;height:42px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      *,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important}
+      .partners-track{width:100%;flex-wrap:wrap;animation:none}
+      .partners-group{display:grid;width:100%;grid-template-columns:repeat(7,minmax(0,1fr));gap:18px;padding:0}
+      .partners-group[aria-hidden="true"]{display:none}
+      .partners-group img{width:100%}
+    }
+    @media(max-width:760px) and (prefers-reduced-motion:reduce){.partners-group{grid-template-columns:repeat(4,minmax(0,1fr))}}
+    @media(max-width:460px) and (prefers-reduced-motion:reduce){.partners-group{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav class="container nav" aria-label="Hauptnavigation">
+      <a class="logo" href="#hero" aria-label="Finanzhaus Emsland – Startseite"><img src="Logos/logo-transparent.svg" alt="Finanzhaus Emsland"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Menü öffnen">☰</button>
+      <div class="nav-content" id="navigation">
+        <div class="nav-links"><a href="#hero">Home</a><a href="#ourservices">Leistungen</a><a href="#calculator">Unser Rechner</a><a href="#aboutus">Über uns</a><a href="#contact">Kontakt</a></div>
+        <div class="nav-actions"><a class="button button-dark button-small" href="https://finanzberater.vercel.app/de/kreditanfrage" target="_blank" rel="noopener noreferrer">Kreditanfrage senden</a><a class="button button-small" href="https://www.procheck24.de/einsurance/csp/doHomepageEntry.do?cspident=81D80FC1BA726D927EB600A0BDFBFF6C&amp;p=1" target="_blank" rel="noopener noreferrer">Jetzt Privatkredit berechnen</a></div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="hero">
+      <video autoplay muted loop playsinline preload="metadata" poster="Logos/neuerStandort.jpg" aria-label="Einblicke ins Emsland"><source src="Video/Hompage-Video.mp4" type="video/mp4"></video>
+      <div class="hero-content"><h1>Dein Finanzhaus im Emsland</h1><p>Gemeinsam finanzielle Perspektiven eröffnen</p><a class="button" href="https://calendar.app.google/VKnsC1BcupuVW4Ux9" target="_blank" rel="noopener noreferrer">Kostenlose Erstberatung buchen!</a></div>
+    </section>
+    <section class="app" aria-label="Digitale Versicherungsakte">
+      <a href="https://www.maklerinfo.biz/simplr/register/00NVGT" target="_blank" rel="noopener noreferrer" aria-label="Simplr – Dein mobiler Versicherungsmanager">
+        <svg class="app-banner" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 360" role="img" aria-labelledby="simplr-title simplr-description">
+          <title id="simplr-title">simplr – Dein mobiler Versicherungsmanager</title>
+          <desc id="simplr-description">Verwalte deine Versicherungen einfach und digital mit simplr.</desc>
+          <defs>
+            <linearGradient id="simplr-background" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#07539b"/>
+              <stop offset="1" stop-color="#00336e"/>
+            </linearGradient>
+            <linearGradient id="simplr-screen" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#f7fbff"/>
+              <stop offset="1" stop-color="#e8f1f8"/>
+            </linearGradient>
+            <filter id="simplr-shadow" x="-30%" y="-20%" width="160%" height="150%">
+              <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#001e43" flood-opacity=".42"/>
+            </filter>
+          </defs>
+          <rect width="1600" height="360" fill="url(#simplr-background)"/>
+          <path d="M0 0h750L420 360H0z" fill="#2874bd" opacity=".13"/>
+          <path d="M590 0h430L690 360H260z" fill="#71a7d9" opacity=".08"/>
+          <path d="M1350 0h250v360h-520z" fill="#002955" opacity=".18"/>
+          <text x="78" y="110" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="76" font-weight="700" letter-spacing="-4">simplr</text>
+          <text x="80" y="232" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="53" font-weight="700">Dein mobiler</text>
+          <text x="80" y="296" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="53" font-weight="700">Versicherungsmanager</text>
+          <g transform="translate(1230 22) rotate(9 130 160)" filter="url(#simplr-shadow)">
+            <rect x="28" y="0" width="212" height="326" rx="30" fill="#101820"/>
+            <rect x="38" y="11" width="192" height="304" rx="22" fill="url(#simplr-screen)"/>
+            <rect x="101" y="17" width="67" height="9" rx="5" fill="#101820"/>
+            <text x="54" y="57" fill="#174a78" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700">Meine Versicherungen</text>
+            <text x="54" y="87" fill="#162d42" font-family="Arial,Helvetica,sans-serif" font-size="11">Verträge im Überblick</text>
+            <rect x="52" y="99" width="164" height="65" rx="10" fill="#fff"/>
+            <circle cx="74" cy="122" r="11" fill="#2e93d0"/>
+            <path d="M70 122h8m-4-4v8" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+            <text x="94" y="120" fill="#1b3449" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="700">Deine Verträge</text>
+            <text x="94" y="139" fill="#627486" font-family="Arial,Helvetica,sans-serif" font-size="10">Alles an einem Ort</text>
+            <rect x="52" y="174" width="164" height="48" rx="9" fill="#fff"/>
+            <circle cx="72" cy="198" r="9" fill="#55b69b"/>
+            <path d="m68 198 3 3 5-6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="90" y="195" fill="#1b3449" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="700">Haftpflicht</text>
+            <text x="90" y="210" fill="#627486" font-family="Arial,Helvetica,sans-serif" font-size="9">Optimal abgesichert</text>
+            <rect x="52" y="230" width="164" height="48" rx="9" fill="#fff"/>
+            <circle cx="72" cy="254" r="9" fill="#efad54"/>
+            <path d="M68 254h8m-4-4v8" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+            <text x="90" y="251" fill="#1b3449" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="700">Hausrat</text>
+            <text x="90" y="266" fill="#627486" font-family="Arial,Helvetica,sans-serif" font-size="9">Dein Zuhause geschützt</text>
+            <circle cx="134" cy="296" r="4" fill="#8796a3"/>
+          </g>
+        </svg>
+      </a>
+    </section>
+
+    <section class="section" id="ourservices">
+      <div class="container">
+        <h2 class="title">Unsere Leistungen für dich</h2>
+        <p class="intro">Persönliche Beratung rund um Finanzierung, Versicherung und Vorsorge – passend zu deinen Zielen.</p>
+        <div class="services">
+          <details class="service"><summary>Baufinanzierung</summary><p>Egal ob Kauf, Bau oder Kapitalbeschaffung – mit oder ohne Eigenkapital: Wir vergleichen über 500 Banken in ganz Deutschland. Auch bei negativer SCHUFA finden wir gemeinsam eine Lösung.</p></details>
+          <details class="service"><summary>Privatkredit</summary><p>Freier Verwendungszweck: Ob Auto, Urlaub, Hochzeit oder erste eigene Wohnung – du kannst bis zu 150.000 € und 120 Monate Laufzeit wählen.</p></details>
+          <details class="service"><summary>Modernisierungskredit</summary><p>Flexibles Darlehen ohne Grundschuldeintragung – bis zu 100.000 € für deine Renovierungs- oder Sanierungsprojekte.</p></details>
+          <details class="service"><summary>Umschuldung</summary><p>Reduziere deine monatlichen Belastungen durch Zusammenlegung deiner Kredite. Auch eine Anschlussfinanzierung für deine Immobilie ist möglich.</p></details>
+          <details class="service"><summary>Versicherungen</summary><p>Vergleiche zahlreiche Anbieter für den optimalen Schutz. Mit der App „Simplr“ behältst du alle Verträge digital, transparent und sicher im Blick.</p></details>
+          <details class="service"><summary>Altersvorsorge</summary><p>Klassische Rentenversicherung, Riesterrente, fondsgebundene Rentenversicherung oder Vermögensverwaltung – wir beraten dich individuell.</p></details>
+          <details class="service"><summary>Immobilien</summary><p>Ob Kauf, Verkauf oder Kapitalanlage – wir helfen dir, die passende Immobilie zu finden oder erfolgreich zu verkaufen.</p></details>
+          <details class="service"><summary>Bausparen</summary><p>Plane deine Zukunft mit festen Konditionen: Sparen und günstiges Darlehen – inklusive staatlicher Förderung und Vergleich aller Bausparkassen.</p></details>
+          <details class="service"><summary>Strom / Gas</summary><p>Wir vergleichen über 50 Anbieter und über 1.000 Tarife, um für dich den besten Strom- und Gastarif zu finden.</p></details>
+        </div>
+        <div class="cta"><p><strong>Du hast Fragen zu unseren Leistungen? Kein Problem – wir beraten dich gern persönlich!</strong></p><a class="button" href="mailto:info@finanzhausemsland.de?subject=Kontaktanfrage">Kontaktanfrage senden</a></div>
+      </div>
+    </section>
+
+    <section class="section steps" id="steps">
+      <div class="container">
+        <h2 class="title">Die vier einfachen Schritte zu deiner erfolgreichen Baufinanzierung</h2>
+        <p class="intro">Die richtige Finanzierung zu finden ist oft gar nicht so einfach. Es müssen viele Faktoren wie Einkommen, Familienplanung und bestehende Verpflichtungen berücksichtigt werden. Es gibt unzählige Banken auf dem Markt – aber nicht jede bietet dir eine maßgeschneiderte Lösung. Genau hier kommen wir ins Spiel: Egal ob persönlich oder digital – wir kümmern uns um die perfekte Finanzierung für deinen Traum vom Eigenheim! Auf Grundlage deiner Ziele und Wünsche vergleichen wir über 500 Banken, um die optimale Lösung zu finden. Gemeinsam erstellen wir ein individuelles Konzept, um deinen Wohntraum zu verwirklichen.</p>
+        <div class="step-list">
+          <article class="step"><div class="step-image"><img src="Logos/step1.jpeg" alt="Beratungsgespräch" loading="lazy"></div><div><span class="step-number">Schritt 1 / 4</span><h3>Beratungsgespräch</h3><p>In unserem ersten Gespräch – ob persönlich oder digital – sprechen wir über deine Ziele und Wünsche, klären alle Fragen und planen die ersten Schritte für deine Baufinanzierung. Komplett kostenfrei und transparent!</p></div></article>
+          <article class="step"><div class="step-image"><img src="Logos/step2.jpeg" alt="Individuelles Finanzierungskonzept" loading="lazy"></div><div><span class="step-number">Schritt 2 / 4</span><h3>Dein maßgeschneidertes Konzept</h3><p>Basierend auf deinen Zielen und Vorstellungen erstellen wir dir ein individuelles Angebot. Dafür vergleichen wir über 500 Banken deutschlandweit, prüfen Konditionen und berücksichtigen mögliche Förderprogramme. So finden wir für dich die besten Optionen und erklären dir verständlich die Vor- und Nachteile der verschiedenen Banken.</p></div></article>
+          <article class="step"><div class="step-image"><img src="Logos/step3.jpeg" alt="Antragstellung" loading="lazy"></div><div><span class="step-number">Schritt 3 / 4</span><h3>Antragstellung</h3><p>Sobald wir das passende Angebot gefunden haben, bereiten wir deinen Kreditantrag vor und reichen ihn bei der Bank ein. Wir begleiten alle Schritte bis zum Termin zur Unterschrift deines Darlehensvertrags und sind jederzeit für deine Fragen da.</p></div></article>
+          <article class="step"><div class="step-image"><img src="Logos/step4.jpeg" alt="Auszahlung und Einzug ins neue Zuhause" loading="lazy"></div><div><span class="step-number">Schritt 4 / 4</span><h3>Auszahlung und Einzug in dein neues Zuhause</h3><p>Nach der Unterschrift deines Darlehens wird die Kreditsumme – je nach Baufortschritt oder Kauf – ausgezahlt. Auch danach stehen wir dir bei zukünftigen Anpassungen oder Fragen zur Seite.</p></div></article>
+        </div>
+        <div class="cta"><p>Du hast Fragen? Dann stelle jetzt eine Anfrage über das Kontaktformular.</p><a class="button" href="https://finanzberater.vercel.app/de/kreditanfrage" target="_blank" rel="noopener noreferrer">Kontaktformular</a></div>
+      </div>
+    </section>
+
+    <section class="section" id="calculator">
+      <div class="container">
+        <h2 class="title">Unsere Rechner für dich</h2>
+        <p class="intro">Nutze unsere digitalen Tools, um deine finanzielle Situation besser einzuschätzen: einfach, schnell und völlig unverbindlich.</p>
+        <div class="feature"><h3>Was kannst du dir leisten?</h3><a class="button" href="http://expert.eva-finance.de/b2c.php?flow=modern&amp;gp=117346&amp;start=zinstabelle" target="_blank" rel="noopener noreferrer">Zinsvergleich starten</a></div>
+        <p class="intro" style="margin-top:34px">Neben dem Budgetrechner findest du hier weitere hilfreiche Tools, um deine finanzielle Situation und Absicherung zu planen.</p>
+        <div class="tools">
+          <div class="tool disabled"><svg class="tool-icon" style="color:#999" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 7h6v6M22 7l-8.5 8.5-5-5L2 17"/></svg>Investment-Rechner <small>bald wieder verfügbar</small></div>
+          <a class="tool" href="https://kassenkompass.de/bonusrechner.php?fra=19&amp;bdt=eyJ2IjoiMDBOVkdUIiwidmFyIjoiYmVpdHJhZ3NzaWVnZXIifQ.5wlZE7NsAWNW_-B3rx92Ug" target="_blank" rel="noopener noreferrer"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg>Gesetzliche Krankenversicherung Tarifcheck</a>
+          <a class="tool" href="https://www.maklerinfo.biz/rechner/bd/00NVGT/privatepkw/d8e8" target="_blank" rel="noopener noreferrer"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 11 1.4-2.8a2 2 0 0 1 1.8-1.1h8.1c.7 0 1.4.3 1.9.8L21 11l1.5.5a1 1 0 0 1 .5.9v4.1a1 1 0 0 1-1 1h-2"/><path d="M5 17.5H3a1 1 0 0 1-1-1v-4.1a1 1 0 0 1 .5-.9L4 11"/><path d="M7 17.5h10"/><circle cx="5.5" cy="17" r="2"/><circle cx="18.5" cy="17" r="2"/></svg>Kfz-Versicherung</a>
+          <a class="tool" href="https://www.maklerinfo.biz/rechner/bd/00NVGT/privathaftpflicht/d8e8" target="_blank" rel="noopener noreferrer"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/></svg>Privathaftpflichtversicherung</a>
+          <a class="tool" href="https://www.maklerinfo.biz/rechner/bd/00NVGT/wohngebaeude/d8e8" target="_blank" rel="noopener noreferrer"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v9a2 2 0 0 1-2 2h-5v-7h-4v7H5a2 2 0 0 1-2-2z"/></svg>Wohngebäudeversicherung</a>
+          <a class="tool" href="https://www.maklerinfo.biz/rechner/bd/00NVGT/hausrat/d8e8" target="_blank" rel="noopener noreferrer"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v9a2 2 0 0 1-2 2h-5v-7h-4v7H5a2 2 0 0 1-2-2z"/></svg>Hausratversicherung</a>
+          <a class="tool" href="https://www.maklerinfo.biz/rechner/bd/00NVGT/rechtsschutz/d8e8" target="_blank" rel="noopener noreferrer"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></svg>Rechtsschutzversicherung</a>
+          <a class="tool" href="https://www.maklerinfo.biz/rechner/bd/00NVGT/krankentagegeld/d8e8" target="_blank" rel="noopener noreferrer"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 22V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v18"/><path d="M2 12h4m12 0h4a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2"/><path d="M12 6v4m-2-2h4m-4 7h4m-4 4h4"/></svg>Krankentagegeldversicherung</a>
+          <a class="tool" href="https://www.maklerinfo.biz/rechner/bd/00NVGT/unfall/d8e8" target="_blank" rel="noopener noreferrer"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12h-2.5a2 2 0 0 0-1.9 1.5l-2.4 8a.25.25 0 0 1-.5 0L9.3 2.5a.25.25 0 0 0-.5 0l-2.4 8A2 2 0 0 1 4.5 12H2"/></svg>Unfallversicherung</a>
+          <a class="tool" href="https://rechner.covomo.de/reise/?r=eyJhIjoiNDkxNDkwMjc1MyIsInJlZiI6IjAwTlZHVCJ9&amp;product_subtypes=6&amp;contract_type=1&amp;theme=embedded" target="_blank" rel="noopener noreferrer"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m17.8 19.2-1.8-8.2 3.5-3.5c1.5-1.5 2-3.5 1.5-4.5-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>Auslandsreisekrankenversicherung</a>
+          <a class="tool" href="https://rechner.covomo.de/versicherungskennzeichen/?r=eyJhIjoiNDkxNDkwMjc1MyIsInJlZiI6IjAwTlZHVCJ9&amp;fahrzeugart=e-scooter&amp;theme=embedded" target="_blank" rel="noopener noreferrer"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="16" r="2"/><circle cx="19" cy="16" r="2"/><path d="M7 16h8v-1a4 4 0 0 1 4-4h1l-2-8a2 2 0 0 0-2-2h-4m-1 2h4l1.5 7M7 16l2-5h5"/></svg>E-Scooter-Versicherung</a>
+          <a class="tool" href="https://finanzberater.vercel.app/de/stromrechner" target="_blank" rel="noopener noreferrer"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 10-13h-7z"/></svg>Stromrechner</a>
+          <a class="tool" href="https://pvn.gasvergleich.de/trck/eclick/f57c9972f2644a10d6231d848d8f76e6" target="_blank" rel="noopener noreferrer"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4.1 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>Gasrechner</a>
+          <a class="tool" href="https://www.procheck24.de/einsurance/csp/doHomepageEntry.do?cspident=81D80FC1BA726D927EB600A0BDFBFF6C&amp;p=1" target="_blank" rel="noopener noreferrer"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>Ratenkreditrechner</a>
+        </div>
+        <p class="cta">Du hast Fragen? Vereinbare jetzt einen kostenlosen <a href="https://calendar.app.google/VKnsC1BcupuVW4Ux9" target="_blank" rel="noopener noreferrer">Beratungstermin</a>.</p>
+      </div>
+    </section>
+
+    <section class="section" id="aboutus">
+      <div class="container">
+        <h2 class="title">Über uns</h2>
+        <div class="people">
+          <article class="person"><h3>David Zgibnev</h3><p class="role">Geschäftsführer &amp; Finanzierungsvermittler</p><p class="quote">Ich löse Deine Finanzierungsprobleme: clever, unkompliziert und persönlich!</p><div class="contacts"><a href="tel:+4915156110229">Telefon</a><a href="https://wa.me/4915156110229" target="_blank" rel="noopener noreferrer">WhatsApp</a><a href="mailto:david@finanzhausemsland.de">E-Mail</a><a href="https://de.linkedin.com/in/david-zgibnev" target="_blank" rel="noopener noreferrer">LinkedIn</a></div><a class="button" href="https://calendar.app.google/VKnsC1BcupuVW4Ux9" target="_blank" rel="noopener noreferrer">Jetzt Termin buchen</a></article>
+          <article class="person"><h3>Mathias Alberg</h3><p class="role">Geschäftsführer &amp; Versicherungsmakler</p><p class="quote">Ich bringe Struktur in Deine Finanzen</p><div class="contacts"><a href="tel:+4915222751992">Telefon</a><a href="https://wa.me/4915222751992" target="_blank" rel="noopener noreferrer">WhatsApp</a><a href="mailto:mathias@finanzhausemsland.de">E-Mail</a></div><a class="button" href="https://calendar.app.google/9rHJRLGkAM3KDJUh7" target="_blank" rel="noopener noreferrer">Jetzt Termin buchen</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="review-head"><h2 id="reviews-title">Das sagen unsere Kunden</h2><div class="stars" aria-label="5 von 5 Sternen">★★★★★ <strong>5.0</strong></div><a href="https://share.google/CPbtoDG9S7dHoiQzR">Powered by Google</a></div>
+        <div class="review-grid">
+          <article class="review"><h3>Jules <span class="stars">★★★★★</span></h3><p>David! Der Retter in der Not. Viele Banken hatten bereits abgelehnt, aber David hat mir sofort gesagt: das bekommen wir hin. Und es hat funktioniert. Am Ende des Tages zählt, was unter dem Strich steht.</p></article>
+          <article class="review"><h3>Sonja Alferink <span class="stars">★★★★★</span></h3><p>Bin super zufrieden mit Beratung und Leistung, auch in schwierigen Situationen. Unbedingt weiter zu empfehlen.</p></article>
+          <article class="review"><h3>Reber Aldemir <span class="stars">★★★★★</span></h3><p>Ich bin schon seit einigen Jahren Kunde und sehr zufrieden mit der fachlichen Beratung, zeitlichen Flexibilität und dem zielorientierten Engagement.</p></article>
+          <article class="review"><h3>MMM Fahrzeugaufbereitung <span class="stars">★★★★★</span></h3><p>Ich danke dir für die gute Beratung! Sehr menschlich und nur auf den Kunden fokussiert!</p></article>
+          <article class="review"><h3>anoop jose <span class="stars">★★★★★</span></h3><p>Freundliche Beratung und super schnell arbeiten.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="title">Kontakt</h2>
+        <div class="contact-grid">
+          <iframe loading="lazy" title="Karte: Gelgöskenstiege 17, 49808 Lingen (Ems)" src="https://maps.google.com/maps?q=Gelg%C3%B6skenstiege+17,+49808+Lingen+(Ems)&amp;t=m&amp;z=16&amp;output=embed&amp;iwloc=near"></iframe>
+          <div class="location"><img src="Logos/neuerStandort.jpg" alt="Baustelle der neuen Geschäftsräumlichkeiten am Hessenweg" loading="lazy"><p>Unsere neuen Geschäftsräumlichkeiten entstehen gerade am Hessenweg. Wir freuen uns darauf, euch voraussichtlich ab März 2027 dort begrüßen zu dürfen!</p></div>
+        </div>
+        <div class="addresses"><div><strong>Haustermine</strong></div><div><strong>Gelgöskenstiege 17</strong><br>49808 Lingen (Ems)</div></div>
+        <p class="partners-title">Unsere Bank- &amp; Versicherungspartner</p>
+        <div class="partners" aria-label="Partnerlogos">
+          <div class="partners-track">
+            <div class="partners-group">
+              <img src="Logos/bank1.png" alt="Partnerlogo 1" loading="lazy"><img src="Logos/bank2.png" alt="Partnerlogo 2" loading="lazy"><img src="Logos/bank3.png" alt="Partnerlogo 3" loading="lazy"><img src="Logos/bank4.png" alt="Partnerlogo 4" loading="lazy"><img src="Logos/bank5.png" alt="Partnerlogo 5" loading="lazy"><img src="Logos/bank6.png" alt="Partnerlogo 6" loading="lazy"><img src="Logos/bank7.png" alt="Partnerlogo 7" loading="lazy"><img src="Logos/bank8.png" alt="Partnerlogo 8" loading="lazy"><img src="Logos/bank9.png" alt="Partnerlogo 9" loading="lazy"><img src="Logos/bank10.png" alt="Partnerlogo 10" loading="lazy"><img src="Logos/bank11.png" alt="Partnerlogo 11" loading="lazy"><img src="Logos/bank12.png" alt="Partnerlogo 12" loading="lazy"><img src="Logos/bank13.png" alt="Partnerlogo 13" loading="lazy"><img src="Logos/bank14.png" alt="Partnerlogo 14" loading="lazy"><img src="Logos/bank15.png" alt="Partnerlogo 15" loading="lazy"><img src="Logos/bank16.png" alt="Partnerlogo 16" loading="lazy"><img src="Logos/bank17.png" alt="Partnerlogo 17" loading="lazy"><img src="Logos/bank18.png" alt="Partnerlogo 18" loading="lazy"><img src="Logos/bank19.png" alt="Partnerlogo 19" loading="lazy"><img src="Logos/bank20.png" alt="Partnerlogo 20" loading="lazy"><img src="Logos/bank21.png" alt="Partnerlogo 21" loading="lazy">
+            </div>
+            <div class="partners-group" aria-hidden="true">
+              <img src="Logos/bank1.png" alt="" loading="lazy"><img src="Logos/bank2.png" alt="" loading="lazy"><img src="Logos/bank3.png" alt="" loading="lazy"><img src="Logos/bank4.png" alt="" loading="lazy"><img src="Logos/bank5.png" alt="" loading="lazy"><img src="Logos/bank6.png" alt="" loading="lazy"><img src="Logos/bank7.png" alt="" loading="lazy"><img src="Logos/bank8.png" alt="" loading="lazy"><img src="Logos/bank9.png" alt="" loading="lazy"><img src="Logos/bank10.png" alt="" loading="lazy"><img src="Logos/bank11.png" alt="" loading="lazy"><img src="Logos/bank12.png" alt="" loading="lazy"><img src="Logos/bank13.png" alt="" loading="lazy"><img src="Logos/bank14.png" alt="" loading="lazy"><img src="Logos/bank15.png" alt="" loading="lazy"><img src="Logos/bank16.png" alt="" loading="lazy"><img src="Logos/bank17.png" alt="" loading="lazy"><img src="Logos/bank18.png" alt="" loading="lazy"><img src="Logos/bank19.png" alt="" loading="lazy"><img src="Logos/bank20.png" alt="" loading="lazy"><img src="Logos/bank21.png" alt="" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <nav class="footer-links" aria-label="Rechtliche Informationen"><a href="https://finanzberater.vercel.app/legalnotice">Impressum</a><a href="https://finanzberater.vercel.app/privacypolicy">Datenschutz</a></nav>
+    <p><a href="https://maps.google.com/maps?q=Gelg%C3%B6skenstiege+17,+49808+Lingen+(Ems)" target="_blank" rel="noopener noreferrer">Gelgöskenstiege 17, 49808 Lingen (Ems)</a></p>
+    <div class="social"><a href="mailto:info@finanzhausemsland.de">E-Mail</a><a href="tel:+4915156110229">Telefon</a><a href="https://wa.me/4915156110229" target="_blank" rel="noopener noreferrer">WhatsApp</a><a href="https://www.instagram.com/finanzhausemsland/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.tiktok.com/@finanzhausemsland" target="_blank" rel="noopener noreferrer">TikTok</a><a href="https://de.linkedin.com/company/finanzhaus-emsland" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
+    <p>© 2025 Finanzhaus Emsland</p>
+  </footer>
+  <aside class="floating" aria-label="Schnellkontakt"><a href="tel:+4915156110229" aria-label="Anrufen">☎</a><a href="mailto:info@finanzhausemsland.de" aria-label="E-Mail schreiben">✉</a><a href="https://www.instagram.com/finanzhausemsland/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">◎</a><a href="https://www.tiktok.com/@finanzhausemsland" target="_blank" rel="noopener noreferrer" aria-label="TikTok">♪</a><a href="https://de.linkedin.com/company/finanzhaus-emsland" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a></aside>
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const navContent = document.querySelector("#navigation");
+    toggle.addEventListener("click", () => {
+      const open = navContent.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute("aria-label", open ? "Menü schließen" : "Menü öffnen");
+    });
+    navContent.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
+      navContent.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Menü öffnen");
+    }));
+  </script>
+</body>
+</html>
